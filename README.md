@@ -17,6 +17,10 @@
 * The images were processed using ResNet preprocessing in batches of five and resized to 255x255 and then split into training and validation batches using an 80/20 split.
 * Data augmentation was impllemented after two inital models badly overfit and failed to generalize
 
-## Model Results
+## Project Results
+* Best model was a fine-tuned Xception Model (pre-trained Keras model): 74% accuracy on the validation set
 
 ## Ideas for Further Refinement
+* Try boundary boxes around things that represent negative invfuence then measuring the distances from the homes to the boundary box, since Convnets are location invariant.
+* Try more zoomed in images of the homes
+* Switch scoring metric to recall and attempt to flag 100% or residences with potentially adverse locations. This makes more sense if model was utilized in a professional setting
